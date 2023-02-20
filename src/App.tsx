@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { HomePage } from '@/pages/HomePage/HomePage';
 import { ProfilePage } from '@/pages/ProfilePage/ProfilePage';
 
-import { Footer } from '@/components/Footer/Footer';
+// import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
 
 import './App.scss';
@@ -18,7 +18,6 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </main>
-      <Footer />
     </div>
   );
 }

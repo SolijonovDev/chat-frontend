@@ -1,3 +1,5 @@
+@import "@/styles/variables";
+
 .app {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,9 @@
 }
 
 .main {
+  display: flex;
   flex-grow: 1;
-  border: 1px solid red;
+  flex-direction: column;
+  color: $color4;
+  background-color: $color3;
 }

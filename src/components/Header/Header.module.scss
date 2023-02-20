@@ -1,21 +1,43 @@
-@import '@/styles/variables';
+@import "@/styles/variables";
 
 .header {
+  position: fixed;
+  z-index: 200;
   padding: 12px 0;
-}
+  width: 100%;
+  color: $color2;
+  background-color: $color1;
 
-.contain {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
 
-ul,
-li {
-  list-style-type: none;
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  .link {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: $color4;
+
+    &:hover {
+      color: $color7;
+    }
+  }
 }

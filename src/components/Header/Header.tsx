@@ -12,11 +12,13 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Container className={styles.contain}>
-        <h2>Header</h2>
+        <h2 className={styles.logo}>Facebook</h2>
         <nav className={styles.nav}>
           {links.map(link => (
-            <li key={link.id}>
-              <Link to={link.href}>{link.name}</Link>
+            <li key={link.id} className={styles.item}>
+              <Link to={link.href} className={styles.link}>
+                {link.name}
+              </Link>
             </li>
           ))}
         </nav>

@@ -1,0 +1,61 @@
+@import "@/styles/variables";
+
+.inputPanel {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: $color5;
+
+  .filePanel input {
+    display: none;
+  }
+
+  .filePanel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 70px;
+    height: 100%;
+  }
+
+  .image {
+    border-radius: 50%;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .form {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .input {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .button {
+    border-radius: 10%;
+    padding: 5px 25px;
+    width: 80px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .button img {
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+  }
+}

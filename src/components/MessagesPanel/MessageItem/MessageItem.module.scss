@@ -1,0 +1,19 @@
+@import "@/styles/variables";
+
+.messageItem {
+  border-radius: 4px;
+  padding: 12px;
+  width: 50%;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color7;
+  background-color: $color4;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &.myMessage {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,21 @@
+@import '@/styles/variables';
+
+.header {
+  padding: 12px 0;
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+ul,
+li {
+  list-style-type: none;
+}

@@ -1,0 +1,34 @@
+@import "@/styles/variables";
+
+.sidebar {
+  position: relative;
+  margin-left: 0;
+  padding: 20px 5px;
+  background-color: $color5;
+
+  .contain {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+
+  .item {
+    margin-bottom: 15px;
+    margin-left: 40px;
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color2;
+    background-color: transparent;
+    transition: background-color 300ms;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &.active {
+      background-color: $color6;
+    }
+  }
+}

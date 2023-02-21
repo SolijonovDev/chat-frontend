@@ -37,16 +37,6 @@ export const MessagesPanel = () => {
       <MessageItem align="right" />
       <MessageItem />
       <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
     </div>
   );
 };

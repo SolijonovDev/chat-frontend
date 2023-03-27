@@ -1,42 +1,35 @@
-import React from 'react';
+import React, { FC } from 'react';
+
+import { useUser } from '@/context/UserProvider';
 
 import { MessageItem } from '@/components/MessagesPanel/MessageItem/MessageItem';
 
 import styles from './MessagesPanel.module.scss';
 
-export const MessagesPanel = () => {
+interface IMessage {
+  userId: string;
+  message: string;
+}
+
+interface IMessagesPanelProps {
+  messages: IMessage[];
+}
+
+export const MessagesPanel: FC<IMessagesPanelProps> = ({ messages }) => {
+  const { userId: currentUserId } = useUser();
   return (
     <div className={styles.messagesPanel}>
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem />
-      <MessageItem align="right" />
-      <MessageItem />
-      <MessageItem />
+      {messages.map((message, index) => {
+        console.log('userId', message.userId);
+        console.log('currentUserid', currentUserId);
+        return (
+          <MessageItem
+            align={currentUserId == message.userId}
+            message={message.message}
+            key={index}
+          />
+        );
+      })}
     </div>
   );
 };

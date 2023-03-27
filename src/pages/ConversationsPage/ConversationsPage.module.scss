@@ -1,0 +1,15 @@
+@import "@/styles/variables";
+
+.home {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .contain {
+    display: grid;
+    flex-grow: 1;
+    grid-template-areas: s d;
+    grid-template-columns: 2fr 5fr;
+    height: 100%;
+  }
+}

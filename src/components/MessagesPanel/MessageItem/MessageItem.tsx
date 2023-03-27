@@ -6,10 +6,6 @@ import { IMessageItem } from '@/components/MessagesPanel/MessageItem/MessageItem
 
 import styles from './MessageItem.module.scss';
 
-export const MessageItem: FC<IMessageItem> = ({ align }) => {
-  return (
-    <div className={cn(styles.messageItem, { [styles.myMessage]: align === 'right' })}>
-      MessageItem
-    </div>
-  );
+export const MessageItem: FC<IMessageItem> = ({ align, message }) => {
+  return <div className={cn(styles.messageItem, { [styles.myMessage]: align })}>{message}</div>;
 };

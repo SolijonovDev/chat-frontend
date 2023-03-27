@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
+
+import { useSearchParams } from 'react-router-dom';
 
 import galleryImg from '@/assets/gallery.png';
 import sendImg from '@/assets/send.png';
 
 import styles from './InputPanel.module.scss';
 
-export const InputPanel = () => {
+interface IInputPanelProps {
+  sendMessage: (value: string, chatId: string) => void;
+}
+
+export const InputPanel: FC<IInputPanelProps> = ({ sendMessage }) => {
   const [message, setMessage] = useState<string>('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const id = searchParams.get('id');
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('e', e);
+    sendMessage(message, String(id));
     setMessage('');
   };
 
@@ -32,6 +40,7 @@ export const InputPanel = () => {
           placeholder="Something..."
           className={styles.input}
         />
+
         <button type="submit" className={styles.button}>
           <img src={sendImg} />
         </button>

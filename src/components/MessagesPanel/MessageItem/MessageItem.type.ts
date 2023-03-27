@@ -1,4 +1,5 @@
 export interface IMessageItem {
-  align?: string;
+  align?: boolean;
   className?: string;
+  message: string;
 }

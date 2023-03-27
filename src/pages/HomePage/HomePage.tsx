@@ -1,17 +1,14 @@
 import React, { FC } from 'react';
 
-import { Dashboard } from '@/pages/HomePage/Dashboard';
-import { Sidebar } from '@/pages/HomePage/Sidebar';
+import { Text } from '@/components/Text/Text';
 
-// import { Container } from '@/components/Container/Container';
 import styles from './HomePage.module.scss';
 
 export const HomePage: FC = () => {
   return (
     <div className={styles.home}>
       <div className={styles.contain}>
-        <Sidebar />
-        <Dashboard />
+        <Text variant="h1">Homepage</Text>
       </div>
     </div>
   );

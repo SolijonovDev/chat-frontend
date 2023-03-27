@@ -12,6 +12,11 @@ export const links: ILink[] = [
   },
   {
     id: 2,
+    href: '/chat',
+    name: 'Conversations',
+  },
+  {
+    id: 3,
     href: '/profile',
     name: 'Profile',
   },
